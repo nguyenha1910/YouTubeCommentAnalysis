@@ -11,7 +11,7 @@ HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
 setuptools.setup(
-    author="Nguyen Ha",
+    author="Nguyen Ha, Shuo Niu",
     author_email='nguyenhbhcm@gmail.com',
     classifiers=[
         'License :: OSI Approved :: MIT License',
@@ -26,10 +26,9 @@ setuptools.setup(
     include_package_data=True,
     package_data={'YouTubeCommentAnalysis': ['*.csv']},
     license="MIT license",
-    version='0.0.1',
+    version='0.0.4',
     zip_safe=False,
     install_requires=['beautifulsoup4', 'nltk', 'emoji', 'gensim', 'pandas',
-                      'os','importlib_resources','collections','ast','pandas',
-                      're', 'pickle5'],
+                    'importlib_resources; python_version < "3.7"'],
     python_requires='>=3.6',
 )
